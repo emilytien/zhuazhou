@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <title>回函填寫成功! | 寶爸抓周</title>
+    <meta name="description" content="寶爸抓周表單填寫成功，我們將盡快聯繫您!" />
+    <meta property="og:title" content="回函填寫成功! | 寶爸抓周">
+    <meta property="og:description" content="寶爸抓周表單填寫成功，我們將盡快聯繫您!">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="">    
+    <meta property="og:site_name" content="寶爸抓周">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="article:author" content="寶爸抓周">
+    <meta property="og:image" content="https://baobababyphoto.sisco.com.tw/baoba/img/index/lgbanner.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">    
+
+    <!-- css樣式 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- 自定義 CSS -->
+    <style>
+    /* 引入中文字體 */
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap');
+
+    /* 修改中文字體 */
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+    html {
+    scroll-behavior: smooth;
+    }
+
+  </style>
+
+</head>
+<body>
+    <!-- LOGO容器 -->
+    <div id="logoContainer"></div>
+   
+    <!-- Navbar 容器 -->
+    <div id="navbarContainer" class="sticky top-0 z-10"></div>
+
+    <div class="px-6 pt-10 pb-6 bg-orange-100 leading-8 md:px-20 lg:px-36 xl:px-48 selection:bg-yellow-300 scroll-smooth h-screen">  
+
+
+        <div class="w-4/5 md:2/3 lg:w-1/2 m-auto mt-20 p-6 border-2 border-zinc-800 bg-zinc-50 shadow-[6px_6px_0px_0px_rgba(251,146,60,1.000)]">
+            <div class="tracking-wide">
+                <p class="text-lg py-1">感謝您填寫表單，我們將盡快與您聯繫!</p>
+                <p class="text-base py-1 text-gray-500">(填寫表單僅為內容諮詢，並非訂購方案，如需訂購方案請至<a class="text-red-700 font-semibold" href="https://baobababy.very1.shop/prodList" target="_blank">線上訂購</a>)</p>
+            </div>
+            <div class="flex justify-around pt-4 pb-2">
+                <a href="https://baobababyphoto.sisco.com.tw/baoba/" class="py-2 px-4 border-2 border-zinc-800 bg-orange-600 text-zinc-50">回首頁</a>
+                <a href="line://ti/p/@opn8267l" class="py-2 px-3 border-2 border-zinc-800 bg-green-600 text-zinc-50">官方Line</a>
+            </div>
+        </div>
+
+
+        <!-- To Top -->
+        <div id="hiddenOrNot" class="fixed bottom-20 right-0 hidden m-2 flex flex-col">
+            <button id="scrollToTopBtn" class="w-14">
+                <img src="img/top.png" alt="">
+            </button>
+            <a href="https://baobababyphoto.sisco.com.tw/baoba/index.html" class="w-14 h-14">
+                <img src="img/homepage.png" alt="">
+            </a>    
+        </div>
+    
+
+    </div>  
+
+    <!-- Footer 容器 -->
+    <div id="footerContainer"></div>
+      
+
+
+    <script>
+
+
+        // 監聽捲動事件，顯示或隱藏「回到頂部」按鈕
+        window.onscroll = function() {
+            toggleScrollToTopButton();
+        };
+
+        // 點擊按鈕時捲動到頂部
+        document.getElementById("scrollToTopBtn").onclick = function() {
+            scrollToTop();
+        };
+
+        // 切換顯示/隱藏「回到頂部」按鈕
+        function toggleScrollToTopButton() {
+            var div = document.getElementById("hiddenOrNot");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            div.classList.remove("hidden");
+            } else {
+            div.classList.add("hidden");
+            }
+        }
+
+        // 捲動到頂部的函數
+        function scrollToTop() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        }
+
+        // 加載 LOGO
+        fetch('logo.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('logoContainer').innerHTML = data;
+        });
+
+
+        // 加載 Navbar
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbarContainer').innerHTML = data;
+        });
+
+
+        // 加載 Footer
+        fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById('footerContainer').innerHTML = data;
+        });
+
+        // 加載 toTop
+        fetch('toTop.html')
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById('toTop').innerHTML = data;
+        });
+
+      </script>
+</body>
+</html>

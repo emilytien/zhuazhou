@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <title>填寫抓周表單 - 輕鬆開啟您寶寶的特別日子 | 寶爸抓周</title>
+    <meta name="description" content="在這填寫抓周表單的專區，輕鬆開啟為寶寶籌備特別日子的旅程。提供簡單易懂的表單，助您快速選擇所需服務，讓抓周籌備流程更加輕鬆愉快。讓我們一同共同策劃，為您的寶寶打造難忘的一歲慶祝體驗。" />
+    <meta property="og:title" content="填寫抓周表單 - 輕鬆開啟您寶寶的特別日子 | 寶爸抓周">
+    <meta property="og:description" content="在這填寫抓周表單的專區，輕鬆開啟為寶寶籌備特別日子的旅程。提供簡單易懂的表單，助您快速選擇所需服務，讓抓周籌備流程更加輕鬆愉快。讓我們一同共同策劃，為您的寶寶打造難忘的一歲慶祝體驗。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="">    
+    <meta property="og:site_name" content="寶爸抓周">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="article:author" content="寶爸抓周">
+
+    <!-- css樣式 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 表單js -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.min.js"></script>
+    <script src="js/IftekInviteForm.js"></script>
+
+    <!-- 自定義 CSS -->
+    <style>
+    /* 引入中文字體 */
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap');
+
+    /* 修改中文字體 */
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+  </style>
+
+</head>
+<body>
+    <!-- LOGO容器 -->
+    <div id="logoContainer"></div>
+
+    <!-- Navbar 容器 -->
+    <div id="navbarContainer" class="sticky top-0 z-10"></div>
+
+    <div  class="px-5 pt-10 pb-6 bg-orange-100 leading-8 md:px-20 lg:px-36 xl:px-48 selection:bg-yellow-300 scroll-smooth">
+        <!-- 表單 -->
+        <div class="mb-20 text-zinc-800">
+            <div class="mt-4 mb-8 mx-auto flex items-center justify-center">
+                <h2 class="inline-block text-center bg-zinc-50 text-2xl border-2 border-zinc-800 p-2 shadow-[6px_6px_0px_0px_rgba(251,113,133,1.000)]">諮詢寶爸</h2>             
+            </div>
+
+            <div class="formborder" style="margin:50px auto;">
+                <!-- <div align="center">
+                    <h2>【預約諮詢】</h2>
+                </div> -->
+                <div class="m-auto bg-zinc-50 border-2 border-zinc-800 px-3 py-4 shadow-[6px_6px_0px_0px_rgba(101,163,13,1.000)] max-w-xl">
+                    <div>
+                        <form id="iftekPanelFrom" name="form1">
+                            <div>
+                                <div>
+                                    <div class="px-3 py-2">
+                                        <label for="name" class="block after:content-['*'] after:ml-0.5 after:text-red-500">
+                                            姓名
+                                        </label>
+                                        <input type="text" name="memName" placeholder="姓名(必填)"  class="w-full px-2 py-1 my-2 bg-lime-500 border-2 border-zinc-800 text-white focus:ring-offset-2 focus:ring-2 focus:ring-zinc-800 placeholder:text-zinc-100 placeholder:text-sm">    
+                                    </div>
+                                    <div class="px-3 py-2">
+                                        <label for="phone" class="block after:content-['*'] after:ml-0.5 after:text-red-500">
+                                            手機
+                                        </label>                
+                                        <input type="text" name="memMobile" placeholder="手機(必填或連絡電話)"  class="w-full px-2 py-1 my-2 bg-lime-500 border-2 border-zinc-800 text-white focus:ring-offset-2 focus:ring-2 focus:ring-zinc-800 placeholder:text-zinc-100 placeholder:text-sm">
+                                    </div>
+                                    <div class="px-3 py-2">
+                                        <label for="email" class="block">
+                                            E-mail
+                                        </label>
+                                        <input type="text" name="memEmail" placeholder="your@example.com" class="w-full px-2 py-1 my-2 bg-lime-500 border-2 border-zinc-800 text-white focus:ring-offset-2 focus:ring-2 focus:ring-zinc-800 placeholder:text-zinc-100 placeholder:text-sm"></div>                
+                                    </div>
+                                    <div class="px-3 py-2"> 
+                                        <label for="date" class="block after:content-['*'] after:ml-0.5 after:text-red-500">
+                                            期望抓周日期
+                                        </label>                    
+                                        <input type="date" id="visitDate" name="visitDate"  class="w-full px-2 py-1 my-2 bg-lime-500 border-2 border-zinc-800 text-white focus:ring-offset-2 focus:ring-2 focus:ring-zinc-800 placeholder:text-zinc-100 placeholder:text-sm" >
+                                    </div>
+                                    <div class="px-3 py-2">
+                                        <label class="block ">
+                                            期望抓周時間
+                                        </label>    
+                                        <select name="t1" class="w-full px-2 py-1 my-2 bg-lime-500 border-2 border-zinc-800 text-white focus:ring-offset-2 focus:ring-2 focus:ring-zinc-800 placeholder:text-zinc-100 placeholder:text-sm">
+                                            <option value="10:30">10:30</option>
+                                            <option value="11:30">11:30</option>
+                                            <option value="12:30">12:30</option>
+                                            <option value="13:30">13:30</option>
+                                            <option value="14:30">14:30</option>
+                                            <option value="15:30">15:30</option>
+                                            <option value="16:30">16:30</option>
+                                            <option value="17:30">17:30</option>
+                                            <option value="18:30">18:30</option>
+                                            <option value="19:30">19:30</option>
+                                            <option value="20:30">20:30</option>
+                                        </select>                                   
+                                    </div>    
+                                    <div class="px-3 py-2">
+                                        <label for="card" class="block after:content-['*'] after:ml-0.5 after:text-red-500">
+                                            選擇分店
+                                        </label>
+                                        <select name="storeNum"  class="w-full px-2 py-1 my-2 bg-lime-500 border-2 border-zinc-800 text-white focus:ring-offset-2 focus:ring-2 focus:ring-zinc-800 placeholder:text-zinc-100 placeholder:text-sm"  >
+                                            <option value="1">台北西門</option>
+                                            <option value="2">高雄創始</option>
+                                            <option value="4">新竹經國</option>
+                                            <option value="6">台南旗艦</option>
+                                            <option value="28">新北板橋</option>
+                                            <option value="57">士林官邸</option>
+                                            <option value="68">信義松山</option>
+                                            <option value="71">台中旗艦</option>
+                                        </select>
+                                    </div>                  
+                                    
+                                <div class="px-3 py-2">
+                                    <div>
+                                        <div>詢問項目</div>
+                                        <label class="p-2" style="white-space: nowrap;">
+                                            <input class="accent-lime-500" type="checkbox" value="105" name="pdtNum">兒童寫真</label>
+                                        <label class="p-2" style="white-space: nowrap;">
+                                            <input class="accent-lime-500" type="checkbox" value="24" name="pdtNum">新生兒寶寶寫真</label>
+                                    </div>
+                                </div>
+                                <div class="px-3 py-2">
+                                    <div>
+                                        <div>消息來源</div>
+                                        <label class="p-2" style="white-space: nowrap;">
+                                            <input class="accent-lime-500" type="checkbox" value="2" name="sourceNum">親友介紹</label>
+                                        <label class="p-2" style="white-space: nowrap;">
+                                            <input class="accent-lime-500" type="checkbox" value="1" name="sourceNum">Google搜尋</label>
+                                        <label class="p-2" style="white-space: nowrap;">
+                                            <input class="accent-lime-500" type="checkbox" value="4" name="sourceNum">Yahoo搜尋</label>
+                                        <label class="p-2" style="white-space: nowrap;">
+                                            <input class="accent-lime-500" type="checkbox" value="5" name="sourceNum">Facebook</label>
+                                        <label class="p-2" style="white-space: nowrap;">
+                                            <input class="accent-lime-500" type="checkbox" value="32" name="sourceNum">LINE</label>
+                                        <label class="p-2" style="white-space: nowrap;">
+                                            <input class="accent-lime-500" type="checkbox" value="15" name="sourceNum">網友推薦blog</label>
+                                        <label class="p-2" style="white-space: nowrap;">
+                                            <input class="accent-lime-500" type="checkbox" value="23" name="sourceNum">Instagram</label>
+                                        <label class="p-2" style="white-space: nowrap;">
+                                            <input class="accent-lime-500" type="checkbox" value="30" name="sourceNum">Dcard</label>
+                                        <label class="p-2" style="white-space: nowrap;">
+                                            <input class="accent-lime-500" type="checkbox" value="16" name="sourceNum">Bing搜尋</label>
+                                        <label class="p-2" style="white-space: nowrap;">
+                                            <input class="accent-lime-500" type="checkbox" value="13" name="sourceNum">DM傳單</label>
+                                        <label class="p-2" style="white-space: nowrap;">
+                                            <input class="accent-lime-500" type="checkbox" value="22" name="sourceNum">異業合作廠商</label>
+                                        <label class="p-2" style="white-space: nowrap;">
+                                            <input class="accent-lime-500" type="checkbox" value="288" name="sourceNum">YouTuber</label>
+                                    </div>
+                                </div>
+                                <div class="px-3 py-2">
+                                    <input type="radio" id="confirm" name="confirm" class="h-3 w-3 m-1 border-gray-300 text-zinc-800 focus:ring-zinc-800" required/>       
+                                    <label for="confirm" class="after:content-['*'] after:ml-0.5 after:text-red-500">
+                                        我了解此表單僅為內容諮詢，並非實際預約抓周時間(如需預約請直接點選線上訂購 )
+                                    </label>
+                                </div>
+                                <div class="flex justify-around py-3">
+                                    <!-- 可能改用position寫，active會比較接近想要的樣子 -->
+                                    <a href="https://baobababy.very1.shop/prodList" target="_blank"  class="py-2 px-3 bg-zinc-50 border border-2 border-zinc-800 shadow-[4px_4px_0px_0px_rgba(101,163,13,1.000)] hover:-translate-y-1 hover:scale-110 active:translate-y-[4px]">線上訂購</a> 
+                                    <input type="button" id="btnSubmit" value="送出表單" class="py-2 px-3 bg-zinc-50 border border-2 border-zinc-800 shadow-[4px_4px_0px_0px_rgba(101,163,13,1.000)] hover:cursor-pointer hover:-translate-y-1 hover:scale-110 active:translate-y-[4px]"></input>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <!-- To Top -->
+    <div id="hiddenOrNot" class="fixed bottom-20 right-0 hidden m-2 flex flex-col">
+        <button id="scrollToTopBtn" class="w-14">
+            <img src="img/top.png" alt="">
+        </button>
+        <a href="https://baobababyphoto.sisco.com.tw/baoba/index.html" class="w-14 h-14">
+            <img src="img/homepage.png" alt="">
+        </a>    
+    </div>
+    
+
+    <!-- Footer 容器 -->
+    <div id="footerContainer"></div>
+
+    <script>
+        // 加載 LOGO
+        fetch('logo.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('logoContainer').innerHTML = data;
+        });
+
+        // 加載 Navbar
+        fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById('navbarContainer').innerHTML = data;
+        });
+
+        // 加載 Footer
+        fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById('footerContainer').innerHTML = data;
+        });
+
+        // 監聽捲動事件，顯示或隱藏「回到頂部」按鈕
+        window.onscroll = function() {
+            toggleScrollToTopButton();
+        };
+
+        // 點擊按鈕時捲動到頂部
+        document.getElementById("scrollToTopBtn").onclick = function() {
+            scrollToTop();
+        };
+
+        // 切換顯示/隱藏「回到頂部」按鈕
+        function toggleScrollToTopButton() {
+            var div = document.getElementById("hiddenOrNot");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            div.classList.remove("hidden");
+            } else {
+            div.classList.add("hidden");
+            }
+        }
+
+        // 捲動到頂部的函數
+        function scrollToTop() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        }
+
+    </script>
+    
+</body>
+</html>

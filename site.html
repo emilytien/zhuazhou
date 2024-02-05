@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <title>專業攝影棚打造專屬寶寶的抓周盛典 - 寶爸抓周活動場地</title>
+    <meta name="description" content="寶爸抓周提供專業攝影棚，為您的寶寶舉辦抓周活動。優雅佈置和高品質攝影設備，打造溫馨且獨特的慶典場地。讓我們專業的團隊為您籌辦，讓抓周成為一個難忘的家庭時刻，與親朋好友共同分享寶寶的成長喜悅。" />
+    <meta property="og:title" content="專業攝影棚打造專屬寶寶的抓周盛典 - 寶爸抓周活動場地">
+    <meta property="og:description" content="寶爸抓周提供專業攝影棚，為您的寶寶舉辦抓周活動。優雅佈置和高品質攝影設備，打造溫馨且獨特的慶典場地。讓我們專業的團隊為您籌辦，讓抓周成為一個難忘的家庭時刻，與親朋好友共同分享寶寶的成長喜悅。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="">    
+    <meta property="og:site_name" content="寶爸抓周">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="article:author" content="寶爸抓周">
+
+    <!-- css樣式 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 表單js -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.min.js"></script>
+    <script src="js/IftekInviteForm.js"></script>
+    <!-- 自適應圖片css -->
+    <link rel="stylesheet" href="css/justifiedGallery.min.css">
+
+    <!-- 自定義 CSS -->
+    <style>
+    /* 引入中文字體 */
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap');
+
+    /* 修改中文字體 */
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+  </style>
+
+</head>
+<body>
+    <!-- LOGO容器 -->
+    <div id="logoContainer"></div>
+
+    <!-- Navbar 容器 -->
+    <div id="navbarContainer" class="sticky top-0 z-10"></div>
+
+    <div  class="px-5 pt-10 pb-6 bg-orange-100 leading-8 md:px-20 lg:px-36 xl:px-48 selection:bg-yellow-300 scroll-smooth">
+        <!-- 抓周場地 -->
+        <div class="mb-20 text-zinc-800">
+            <!-- 標題 -->
+            <div class="mt-4 mb-8 mx-auto flex items-center justify-center">
+                <h2 class="inline-block text-center bg-zinc-50 text-2xl border-2 border-zinc-800 p-2 shadow-[6px_6px_0px_0px_rgba(251,113,133,1.000)]">抓周場地</h2>             
+            </div>
+
+            <div id="gallery" class="justified-gallery">
+                <a href="img/studio/1.jpg">
+                    <img alt="" src="img/studio/1.jpg"/>
+                </a>
+                <a href="img/studio/2.jpg">
+                    <img alt="" src="img/studio/2.jpg"/>
+                </a>
+                <a href="img/studio/3.jpg">
+                    <img alt="" src="img/studio/3.jpg"/>
+                </a>
+                <a href="img/studio/4.jpg">
+                    <img alt="" src="img/studio/4.jpg"/>
+                </a>
+                <a href="img/studio/5.jpg">
+                    <img alt="" src="img/studio/5.jpg"/>
+                </a>
+                <a href="img/studio/6.jpg">
+                    <img alt="" src="img/studio/6.jpg"/>
+                </a>
+                <a href="img/studio/7.jpg">
+                    <img alt="" src="img/studio/7.jpg"/>
+                </a>
+                <a href="img/studio/8.jpg">
+                    <img alt="" src="img/studio/8.jpg"/>
+                </a>
+                <a href="img/studio/9.jpg">
+                    <img alt="" src="img/studio/9.jpg"/>
+                </a>
+                <a href="img/studio/10.jpg">
+                    <img alt="" src="img/studio/10.jpg"/>
+                </a>
+                <a href="img/studio/11.jpg">
+                    <img alt="" src="img/studio/11.jpg"/>
+                </a>
+                <a href="img/studio/12.jpg">
+                    <img alt="" src="img/studio/12.jpg"/>
+                </a>
+                <a href="img/studio/13.jpg">
+                    <img alt="" src="img/studio/13.jpg"/>
+                </a>                
+            </div>
+            
+        </div>
+
+    </div>
+
+    <!-- To Top -->
+    <div id="hiddenOrNot" class="fixed bottom-20 right-0 hidden m-2 flex flex-col">
+        <button id="scrollToTopBtn" class="w-14">
+            <img src="img/top.png" alt="">
+        </button>
+        <a href="https://baobababyphoto.sisco.com.tw/baoba/index.html" class="w-14 h-14">
+            <img src="img/homepage.png" alt="">
+        </a>    
+    </div>
+    
+
+    <!-- Footer 容器 -->
+    <div id="footerContainer"></div>
+
+    <!-- 自適應圖片js -->
+    <script src="js/jquery.justifiedGallery.min.js"></script>
+
+    <script>
+
+        // 自適應圖片
+        $("#gallery").justifiedGallery({
+            rowHeight :250,
+            lastRow : 'nojustify',
+            margins : 6 ,
+            rel: 'etongallery',
+            captions: false,
+            randomize: false
+        }).on('jg.complete', function () {
+            $(this).find('a').colorbox({
+                maxWidth: '80%',
+                maxHeight: '80%',
+                opacity: 0.8,
+                transition: 'elastic',
+                current: ''
+            });
+        });
+
+        // 加載 LOGO
+        fetch('logo.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('logoContainer').innerHTML = data;
+        });
+
+        // 加載 Navbar
+        fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById('navbarContainer').innerHTML = data;
+        });
+
+        // 加載 Footer
+        fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+        document.getElementById('footerContainer').innerHTML = data;
+        });
+
+        // 監聽捲動事件，顯示或隱藏「回到頂部」按鈕
+        window.onscroll = function() {
+            toggleScrollToTopButton();
+        };
+
+        // 點擊按鈕時捲動到頂部
+        document.getElementById("scrollToTopBtn").onclick = function() {
+            scrollToTop();
+        };
+
+        // 切換顯示/隱藏「回到頂部」按鈕
+        function toggleScrollToTopButton() {
+            var div = document.getElementById("hiddenOrNot");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            div.classList.remove("hidden");
+            } else {
+            div.classList.add("hidden");
+            }
+        }
+
+        // 捲動到頂部的函數
+        function scrollToTop() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        }
+
+
+    </script>
+    
+</body>
+</html>
